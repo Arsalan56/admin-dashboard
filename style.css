@@ -56,7 +56,7 @@ body {
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template: 1fr 4fr / 1fr 3fr;
+    grid-template: minmax(100px, 1fr) minmax(500px, 4fr) / 200px minmax(700px, 3fr);
 }
 
 body > * {
@@ -79,3 +79,36 @@ body > * {
 ul > li{
     margin: 10px 0px;
 }
+
+a > img {
+    --size: 25px;
+
+    height: var(--size);
+    width: var(--size);
+    /* position: relative; */
+    /* top: 6px; */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+
+}
+
+.side-container {
+    display: grid;
+    align-content: center;
+}
+
+a {
+    display: grid;
+    /* border: 1px solid white; */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+a > strong {
+    align-self: center;
+    padding-left: 6px;
+}
+
