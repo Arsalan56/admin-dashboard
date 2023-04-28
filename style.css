@@ -63,6 +63,8 @@ body > * {
     border: 1px solid red;
 }
 
+/* Side-bar styling */
+
 .sidebar {
     color: #FCF6F5FF;
     font-size: 1.1em;
@@ -72,7 +74,7 @@ body > * {
     background: var(--color);
     display: grid;
     grid-template:  repeat(3, min-content) / 10px;
-    gap: 10vh;
+    gap: 75px;
     padding: 10px;
 }
 
@@ -80,13 +82,11 @@ ul > li{
     margin: 10px 0px;
 }
 
-a > img {
+img {
     --size: 25px;
 
     height: var(--size);
     width: var(--size);
-    /* position: relative; */
-    /* top: 6px; */
 }
 
 a {
@@ -103,7 +103,6 @@ a {
 
 a {
     display: grid;
-    /* border: 1px solid white; */
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -112,3 +111,33 @@ a > strong {
     padding-left: 6px;
 }
 
+/* Top bar styling */
+
+header {
+    display: grid;
+    grid-template: 3fr 4fr / 3fr 1fr;
+}
+
+input[type='search'] {
+    background: #d1d5db;
+    border: 0px;
+    margin-right: 50px;
+    border-radius: 99px;
+    color: var(--color);
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+.header-user {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.top-left {
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    padding: 15px;
+    align-content: center;
+    gap: 10px
+
+}
