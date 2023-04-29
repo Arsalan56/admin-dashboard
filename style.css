@@ -58,11 +58,6 @@ body {
     display: grid;
     grid-template: minmax(100px, 1fr) minmax(500px, 4fr) / 200px minmax(700px, 3fr);
 }
-
-body > * {
-    border: 1px solid red;
-}
-
 /* Side-bar styling */
 
 .sidebar {
@@ -115,11 +110,11 @@ a > strong {
 
 header {
     display: grid;
-    grid-template: 3fr 4fr / 3fr 1fr;
+    grid-template: 3fr 4fr / 1fr min-content;
 }
 
 input[type='search'] {
-    background: #d1d5db;
+    background: #e5e7eb;
     border: 0px;
     margin-right: 50px;
     border-radius: 99px;
@@ -138,6 +133,34 @@ input[type='search'] {
     grid-template-columns: min-content 1fr min-content;
     padding: 15px;
     align-content: center;
-    gap: 10px
+    gap: 10px;
+}
 
+.header-user {
+    display: grid;
+    grid-template-columns: min-content 100px;
+    align-content: center;
+    padding: 5px 5px 5px 10px;
+}
+
+.center-i {
+    margin: auto;
+}
+
+.user-pfp {
+    height: 50px;
+    width: 50px;
+}
+
+.head-main > .user-pfp {
+    height: 70px;
+    width: 70px;
+
+}
+.user-pfp {
+    border-radius: 100%;
+}
+
+header > * {
+    /* border: 1px solid red */
 }
