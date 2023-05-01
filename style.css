@@ -58,6 +58,11 @@ body {
     display: grid;
     grid-template: minmax(100px, 1fr) minmax(500px, 4fr) / 200px minmax(700px, 3fr);
 }
+
+h5 {
+    font-size: 18px;
+    font-weight: 600;
+}
 /* Side-bar styling */
 
 .sidebar {
@@ -70,7 +75,7 @@ body {
     display: grid;
     grid-template:  repeat(3, min-content) / 10px;
     gap: 75px;
-    padding: 10px;
+    padding: 15px;
 }
 
 ul > li{
@@ -120,6 +125,8 @@ input[type='search'] {
     border-radius: 99px;
     color: var(--color);
     box-sizing: border-box;
+    max-width: 600px;
+    padding: 0px 10px;
 }
 
 .header-user {
@@ -162,7 +169,7 @@ input[type='search'] {
     display: grid;
     grid-template-columns: min-content 1fr repeat(3, min-content);
     grid-column-end: span 2;
-    gap: 15px;
+    gap: 25px;
     align-items: center;
 }
 
@@ -183,7 +190,7 @@ main {
 
 header {
     padding: 10px 30px;
-    gap: 5px 15px;
+    gap: 5px 30px;
     box-shadow: 4px 2px 5px #1f2937cc;
 }
 
@@ -191,4 +198,3 @@ header {
     font-size: 20px;
     font-weight: 600;
 }
-
