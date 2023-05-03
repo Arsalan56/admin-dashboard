@@ -64,6 +64,9 @@ h5 {
     font-size: 18px;
     font-weight: 600;
 }
+
+strong {font-weight: bold}
+
 /* Side-bar styling */
 
 .sidebar {
@@ -216,17 +219,23 @@ main {
     padding: 30px 20px 50px 20px;;
     display: grid;
     grid-template: 3fr 2fr / 5fr 2fr;
+    gap: 20px
 }
 
-.projects {
-    grid-row-end: span 2;
+main > div > p {
+    font-size: 20px;
+    font-weight: 600;
+    grid-column: 1 / -1;
 }
+
+/* Projects */
 
 .projects {
     display: grid;
     grid-template: min-content 1fr / repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     grid-auto-rows: 1fr;
+    grid-row-end: span 2;
 }
 
 .projects > div {
@@ -234,10 +243,6 @@ main {
     display: grid;
     border-radius: 10px;
     grid-template-columns: 10px 1fr;
-}
-
-main > div > p {
-    grid-column: 1 / -1;
 }
 
 .color {
@@ -261,4 +266,33 @@ background: black
 .container > img:first-of-type {
     grid-column: 2;
 }
-/* .container > * {border: 1px solid red} */
+
+/* Announcements*/
+
+.announcements {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+.announcements > p, .trending > p {
+    margin-bottom: 20px
+}
+
+.announcements > div {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.announcements > div > div > p {
+    color: #6b7280;
+    font-size: 14px;
+    padding-top: 5px;
+}
+.line-style {
+    border-top: 1px solid #9ca3af;
+    border-bottom: 1px solid #9ca3af;
+    padding: 10px 0px;
+}
+
