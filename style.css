@@ -98,6 +98,11 @@ a {
     text-decoration: none;
     color: inherit;
     white-space: nowrap;
+    transition: all 0.3s;
+}
+
+a:hover {
+    transform: scale(1.1);
 }
 
 .bigger {
