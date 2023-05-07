@@ -56,7 +56,7 @@ body {
     height:fit-content;
     width: fit-content;
     display: grid;
-    grid-template: minmax(100px, 1fr) minmax(500px, 4fr) / 200px minmax(700px, 3fr);
+    grid-template: 200px minmax(500px, 4fr) / 200px minmax(700px, 3fr);
     overflow: scroll;
 }
 
@@ -137,7 +137,7 @@ input[type='search'] {
     border: 0px;
     margin-right: 50px;
     border-radius: 99px;
-    color: var(--color);
+    font-weight: 600;
     box-sizing: border-box;
     max-width: 600px;
     padding: 0px 10px;
@@ -173,8 +173,8 @@ input[type='search'] {
 .head-main > .user-pfp {
     height: 70px;
     width: 70px;
-
 }
+
 .user-pfp {
     border-radius: 100%;
 }
@@ -198,10 +198,6 @@ header button {
 
 }
 
-main {
-    background: #9ca3af57;
-}
-
 header {
     padding: 10px 30px;
     gap: 5px 30px;
@@ -216,10 +212,11 @@ header {
 /* Main content styling */
 
 main {
-    padding: 30px 20px 50px 20px;;
+    background: #9ca3af57;
+    padding: 30px 20px 50px 20px;
     display: grid;
-    grid-template: 3fr 2fr / 5fr 2fr;
-    gap: 20px
+    grid-template: 3fr / 5fr 2fr;
+    gap: 20px;
 }
 
 main > div > p {
@@ -235,7 +232,6 @@ main > div > p {
     grid-template: min-content 1fr / repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     grid-auto-rows: 1fr;
-    grid-row-end: span 2;
 }
 
 .projects > div {
@@ -269,7 +265,7 @@ background: black
 
 /* Announcements*/
 
-.announcements {
+.announcements, .trending {
     display: grid;
     grid-template-rows: min-content 1fr;
 }
@@ -277,7 +273,7 @@ background: black
     margin-bottom: 20px
 }
 
-.announcements > div {
+.announcements > div, .trending > div {
     background: white;
     padding: 30px;
     border-radius: 10px;
@@ -296,3 +292,48 @@ background: black
     padding: 10px 0px;
 }
 
+/* Trending */
+
+.trending {
+    margin-top: 20px;
+}
+
+.trending img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    grid-row: span 2;
+}
+
+.trending > div > div {
+    display: grid;
+    grid-template: min-content 1fr / min-content 1fr;
+    gap: 4px 16px;
+    align-items: center;
+}
+
+.trending > div {
+    gap: 0px
+}
+
+.line-remove {
+    border-bottom: none;
+}
+
+.pads {
+    padding: 10px 0px;
+}
+
+.trending > div > div:first-of-type {
+    padding-bottom: 10px;
+}
+
+.trending > div > div:last-of-type {
+    padding-top: 10px;
+}
+
+.user-desc {
+    color:#6b7280;
+    font-size: 14px;
+    white-space: nowrap;
+}
